@@ -50,7 +50,7 @@ ini_set('display_errors', 'On');
 						cookie : true, // enable cookies to allow the server to access
 						// the session
 						xfbml : true, // parse social plugins on this page
-						version : 'v2.1' // use version 2.1
+						version : 'v2.2' // use version 2.1
 					});
 					//$('#loginbutton,#feedbutton').removeAttr('disabled');
 
@@ -59,15 +59,15 @@ ini_set('display_errors', 'On');
 
 						if (response.status === 'connected') {
 							console.log('Welcome!  Fetching your information.... ');
-							// FB.api('/me', function(response) {
-								// console.log('Successful login for: ' + response.name);
+							// FB.api('/search', { },function(response) {
+								// console.log(response);
 							// });
 							
 							var tok = FB.getAccessToken();
 							FB.api('/search', {
 								'access_token' : tok,
-								"type" : "adkeyword",
-								"q" : "marketing"
+								"type" : "group",
+								"q" : "ana maria braga"
 							}, function(response) {
 								console.log(response);
 							});
