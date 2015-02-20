@@ -1,0 +1,9 @@
+{
+    "require": {
+        "monolog/monolog": "1.0.*",
+        "slim/slim": "2.*",
+        "behat/behat": "2.4.*@stable",
+       	"facebook/php-sdk-v4" : "4.0.*"
+    },
+    "minimum-stability": "dev"
+}
